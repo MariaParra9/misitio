@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <!-- Enlazar Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-color: #fff;
+        }
+        .navbar {
+            background-color: #58B2AF;
+        }
+        .navbar-nav {
+            margin-left: 0;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .jumbotron {
+            background-color: #58B2AF;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .carousel-indicators {
+            border-color: #58B2AF; /* Borde de los indicadores */
+        }
+        .carousel-control-prev, .carousel-control-next {
+            color: #58B2AF; /* Color de las flechas */
+        }
+        .carousel-item img {
+            max-width: 100%; /* Ancho máximo de las imágenes */
+            height: auto; /* Altura automática */
+            margin: 0 auto; /* Centrar las imágenes horizontalmente */
+        }
+        .noticia-text {
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente del texto */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        /* Agregar margen superior al contenido principal */
+        .contenido-principal {
+            padding-top: 30px; /* Espacio superior */
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación (mismo menú que en la página de inicio) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="equipo.html">Equipo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="noticias.html">Noticias</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Carrusel de Noticias -->
+    <div class="container contenido-principal">
+        <div class="jumbotron">
+            <h1>Últimas Noticias</h1>
+        </div>
+        <div id="noticiasCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#noticiasCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#noticiasCarousel" data-slide-to="1"></li>
+                <li data-target="#noticiasCarousel" data-slide-to="2"></li>
+                <!-- Añadir indicadores para más noticias si es necesario -->
+            </ol>
+            <div class="carousel-inner">
+                <!-- Noticia 1 -->
+                <div class="carousel-item active">
+                    <img src="images/noticia1.jpg" alt="Noticia 1" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <p class="noticia-text">Texto de la Noticia 1. <a href="#modal1" data-toggle="modal">Ver más</a></p>
+                    </div>
+                </div>
+                <!-- Noticia 2 -->
+                <div class="carousel-item">
+                    <img src="images/noticia2.jpg" alt="Noticia 2" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <p class="noticia-text">Texto de la Noticia 2. <a href="#modal2" data-toggle="modal">Ver más</a></p>
+                    </div>
+                </div>
+                <!-- Noticia 3 -->
+                <div class="carousel-item">
+                    <img src="images/noticia3.jpg" alt="Noticia 3" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <p class="noticia-text">Texto de la Noticia 3. <a href="#modal3" data-toggle="modal">Ver más</a></p>
+                    </div>
+                </div>
+                <!-- Añadir más noticias aquí -->
+            </div>
+            <a class="carousel-control-prev" href="#noticiasCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#noticiasCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Modales para Ampliar Información de Noticias -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal1Label">Noticia 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenido de la Noticia 1 -->
+                    <p>Contenido detallado de la Noticia 1.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 (Replicar los modales para las demás noticias) -->
+    <!-- Modal 3 -->
+    <!-- Añadir más modales aquí -->
+
+    <!-- Enlazar Bootstrap JS y jQuery (opcional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
